@@ -2,12 +2,16 @@ import Route from 'ember-route';
 import RSVP from 'rsvp';
 
 export default Route.extend({
+  queryParams: {
+    'grand-child-qp': { refreshModel: true }
+  },
+
   beforeModel() {
     console.log('grand-child beforeModel');
   },
   model() {
     return new RSVP.Promise(resolve => {
-      setTimeout(() => resolve(console.log('grand-child model')), 1000);
+      setTimeout(() => resolve(console.log('grand-child model')), 10);
     });
   },
   afterModel() {
@@ -18,8 +22,9 @@ export default Route.extend({
     this._super(...arguments);
     console.log('grand-child setupController');
   },
-  resetController() {
+  resetController(controller) {
     this._super(...arguments);
+    controller.set('grand-child-qp', false);
     console.log('grand-child resetController');
   },
 

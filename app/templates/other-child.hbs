@@ -1,3 +1,5 @@
-<p>Child two route template (all hooks overwritten)</p>
+<p>Child two route template</p>
 <button {{action (route-action 'refreshModel')}}>Refresh my child-two model</button>
+<button {{action (toggle 'child-two-qp' this)}}>Toggle child-two-qp query param</button>
+<button {{action (toggle 'child-two-refresh-model-qp' this)}}>Toggle child-two-refresh-model-qp query param</button>
 {{outlet}}

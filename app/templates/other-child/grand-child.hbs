@@ -1,3 +1,4 @@
 <p>Grand child route template</p>
 <button {{action (route-action 'refreshGrandChildModel')}}>Refresh my grand child model</button>
+<button {{action (toggle 'grand-child-qp' this)}}>Toggle grand-child-qp query param (refreshes model, not sticky)</button>
 {{outlet}}

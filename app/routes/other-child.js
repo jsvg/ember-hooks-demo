@@ -2,12 +2,16 @@ import Route from 'ember-route';
 import RSVP from 'rsvp';
 
 export default Route.extend({
+  queryParams: {
+    'child-two-refresh-model-qp': { refreshModel: true }
+  },
+
   beforeModel() {
     console.log('child-two beforeModel');
   },
   model() {
     return new RSVP.Promise(resolve => {
-      setTimeout(() => resolve(console.log('child-two model')), 1000);
+      setTimeout(() => resolve(console.log('child-two model')), 10);
     });
   },
   afterModel() {

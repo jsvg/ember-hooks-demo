@@ -7,7 +7,7 @@ export default Route.extend({
   },
   model() {
     return new RSVP.Promise(resolve => {
-      setTimeout(() => resolve(console.log('app model')), 1000);
+      setTimeout(() => resolve(console.log('app model')), 10);
     });
   },
   afterModel() {
