@@ -1,0 +1,20 @@
+p {
+  font-family: sans-serif;
+}
+
+.route-tree {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+.route-tree .tree { color: black; }
+.route-tree a { color: steelblue; }
+.route-tree a:visited { color: steelblue; }
+.route-tree a.active { color: darkred; }
+
+.route-tree .hint {
+  font-family: sans-serif;
+  font-weight: normal;
+}

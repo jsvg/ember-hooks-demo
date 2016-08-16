@@ -1,0 +1,11 @@
+<div class='route-tree'>
+  <span class='tree'><a href='#' class='active'>Active tree</a></span> | <span class='tree'><a href='#'>Inactive tree</a></span><br>
+  <br>
+  <span class='tree'>{{link-to 'Parent Route' 'application'}} </span><span class='hint'>(hooks overwritten, index route overwritten)</span><br>
+  <span class='tree'>| - {{link-to 'Child Route One' 'child'}} </span><span class='hint'>(hooks implicit, index route implicit)</span><br>
+  <span class='tree'>| - {{link-to 'Child Route Two' 'other-child'}} </span><span class='hint'>(hooks overwritten, index route implicit)</span><br>
+  <span class='tree'>&nbsp;  | - {{link-to 'Grand Child One' 'other-child.grand-child'}} </span><span class='hint'>(hooks overwritten, index route implicit)</span><br>
+</div>
+<p>Parent route template</p>
+<button {{action (route-action 'refreshAppModel')}}>Refresh my application model</button>
+{{outlet}}
